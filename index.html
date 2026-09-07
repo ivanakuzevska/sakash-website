@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="mk">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sakash.mk
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Pacifico&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- ================= NAVBAR ================= -->
+  <header>
+      <nav class="navbar">
+          <a href="#home" class="logo">
+              <img src="sakash-lezhi.png" alt="Sakash">
+          </a>
+
+          <ul class="nav-links">
+              <li><a href="#home" data-i18n="navHome">Почетна</a></li>
+              <li><a href="#about" data-i18n="navAbout">За нас</a></li>
+              <li><a href="#menu" data-i18n="navMenu">Мени</a></li>
+              <li><a href="#team" data-i18n="navTeam">Тим</a></li>
+              <li><a href="#locations" data-i18n="navLocations">Локации</a></li>
+              <li><a href="#news" data-i18n="navNews">Новости</a></li>
+              <li><a href="#contact" data-i18n="navContact">Контакт</a></li>
+
+              <li class="language-dropdown">
+                  <button
+                          type="button"
+                          class="language-dropdown-button"
+                          onclick="toggleLanguageMenu()"
+                  >
+                      🌐 MK ▾
+                  </button>
+
+                  <div class="language-menu" id="language-menu">
+                      <button
+                              type="button"
+                              onclick="changeLanguage('mk'); closeLanguageMenu();"
+                      >
+                          🇲🇰 Македонски
+                      </button>
+
+                      <button
+                              type="button"
+                              onclick="changeLanguage('en'); closeLanguageMenu();"
+                      >
+                          🇬🇧 English
+                      </button>
+                  </div>
+              </li>
+          </ul>
+      </nav>
+  </header>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+   <div class="hero-content">
+    <p class="small-title" data-i18n="heroLabel">
+     &Dcy;&Ocy;&Bcy;&Rcy;&IEcy;&Dcy;&Ocy;&Jsercy;&Dcy;&Ocy;&Vcy;&Tcy;&IEcy; &Vcy;&Ocy; &Scy;&Acy;&Kcy;&Acy;&SHcy;
+    </p>
+    <h1 data-i18n="heroTitle">
+     &Bcy;&lcy;&acy;&gcy;&ocy; &ncy;&iecy; &ocy;&dcy;&icy; &vcy;&ocy; &scy;&tcy;&ocy;&mcy;&acy;&kcy;,
+     <span>
+      &ocy;&dcy;&icy; &vcy;&ocy; &scy;&rcy;&tscy;&iecy;!
+     </span>
+    </h1>
+    <p class="hero-text" data-i18n="heroText">
+     &Dcy;&ocy;&bcy;&rcy;&iecy;&dcy;&ocy;&jsercy;&dcy;&ocy;&vcy;&tcy;&iecy; &vcy;&ocy; &Scy;&acy;&kcy;&acy;&shcy; &ndash; &mcy;&iecy;&scy;&tcy;&ocy;&tcy;&ocy; &kcy;&acy;&dcy;&iecy; &shcy;&tcy;&ocy;
+            &scy;&iecy;&kcy;&ocy;&jsercy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&acy; &iecy; &scy;&vcy;&iecy;&zhcy;&ocy; &pcy;&ocy;&dcy;&gcy;&ocy;&tcy;&vcy;&iecy;&ncy;&acy; &icy; &scy;&ocy;&zcy;&dcy;&acy;&dcy;&iecy;&ncy;&acy;
+            &zcy;&acy; &dcy;&acy; &vcy;&icy; &gcy;&ocy; &rcy;&acy;&zcy;&ucy;&bcy;&acy;&vcy;&icy; &dcy;&iecy;&ncy;&ocy;&tcy;.
+    </p>
+    <div class="hero-buttons">
+     <a class="primary-button" data-i18n="viewMenu" href="#menu">
+      &Pcy;&ocy;&gcy;&lcy;&iecy;&dcy;&ncy;&icy; &mcy;&iecy;&ncy;&icy;
+     </a>
+     <a class="secondary-button" data-i18n="learnMore" href="#about">
+      &Dcy;&ocy;&zcy;&ncy;&acy;&jsercy; &pcy;&ocy;&vcy;&iecy;&kjcy;&iecy;
+     </a>
+    </div>
+   </div>
+   <div class="hero-image">
+    <div class="pancake-circle">
+     <div class="pancake">
+      <img height="250" src="sakash-logo-sredeno.jpg" width="250"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+   <div class="about-image">
+   </div>
+   <div class="about-content">
+
+    <h2 data-i18n="aboutTitle">
+     &Mcy;&acy;&lcy;&ocy; &mcy;&iecy;&scy;&tcy;&ocy;.
+     <span>
+      &Gcy;&ocy;&lcy;&iecy;&mcy;&acy; &ljcy;&ucy;&bcy;&ocy;&vcy;.
+     </span>
+    </h2>
+       <p data-i18n="aboutText">
+           &Vcy;&ocy; 2020 &gcy;&ocy;&dcy;&icy;&ncy;&acy;, &bdquo;&Scy;&acy;&kcy;&acy;&shcy;?&ldquo; &zcy;&acy;&pcy;&ocy;&chcy;&ncy;&acy; &kcy;&acy;&kcy;&ocy; &mcy;&acy;&lcy; &scy;&iecy;&zcy;&ocy;&ncy;&scy;&kcy;&icy; &bcy;&icy;&zcy;&ncy;&icy;&scy; &vcy;&ocy; &Icy;&lcy;&icy;&ncy;&dcy;&iecy;&ncy;, &vcy;&ocy; &dcy;&rcy;&vcy;&iecy;&ncy; &kcy;&icy;&ocy;&scy;&kcy; &ocy;&dcy; &scy;&acy;&mcy;&ocy; &ncy;&iecy;&kcy;&ocy;&lcy;&kcy;&ucy; &kcy;&vcy;&acy;&dcy;&rcy;&acy;&tcy;&ncy;&icy; &mcy;&iecy;&tcy;&rcy;&icy;. &Icy;&dcy;&iecy;&jsercy;&acy;&tcy;&acy; &bcy;&iecy;&shcy;&iecy; &iecy;&dcy;&ncy;&ocy;&scy;&tcy;&acy;&vcy;&ncy;&acy; &ndash; &dcy;&acy; &scy;&iecy; &scy;&ocy;&zcy;&dcy;&acy;&dcy;&acy;&tcy; &vcy;&kcy;&ucy;&scy;&ncy;&icy; &icy; &kcy;&rcy;&iecy;&acy;&tcy;&icy;&vcy;&ncy;&icy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy; &kcy;&ocy;&icy; &kjcy;&iecy; &gcy;&icy; &ncy;&acy;&tcy;&iecy;&rcy;&acy;&acy;&tcy; &lcy;&ucy;&gjcy;&iecy;&tcy;&ocy; &pcy;&ocy;&vcy;&tcy;&ocy;&rcy;&ncy;&ocy; &dcy;&acy; &scy;&iecy; &vcy;&rcy;&acy;&tcy;&acy;&tcy;.
+           <br/>
+           <br/>
+           &Ocy;&ncy;&acy; &shcy;&tcy;&ocy; &pcy;&rcy;&vcy;&icy;&chcy;&ncy;&ocy; &tcy;&rcy;&iecy;&bcy;&acy;&lcy;&ocy; &dcy;&acy; &bcy;&icy;&dcy;&iecy; &lcy;&iecy;&tcy;&ncy;&acy; &pcy;&rcy;&icy;&kcy;&acy;&zcy;&ncy;&acy;, &mcy;&ncy;&ocy;&gcy;&ucy; &bcy;&rcy;&zcy;&ocy; &pcy;&rcy;&iecy;&rcy;&acy;&scy;&ncy;&acy; &vcy;&ocy; &ncy;&iecy;&shcy;&tcy;&ocy; &pcy;&ocy;&gcy;&ocy;&lcy;&iecy;&mcy;&ocy;. &Ocy;&dcy; &mcy;&acy;&lcy; &kcy;&icy;&ocy;&scy;&kcy; &dcy;&ocy; &pcy;&rcy;&iecy;&pcy;&ocy;&zcy;&ncy;&acy;&tcy;&lcy;&icy;&vcy;&ocy; &icy;&mcy;&iecy; &vcy;&ocy; &scy;&kcy;&ocy;&pcy;&scy;&kcy;&acy;&tcy;&acy; &gcy;&acy;&scy;&tcy;&rcy;&ocy;&ncy;&ocy;&mcy;&scy;&kcy;&acy; &scy;&tscy;&iecy;&ncy;&acy;, &pcy;&rcy;&icy;&kcy;&acy;&zcy;&ncy;&acy;&tcy;&acy; &ncy;&acy; &bdquo;&Scy;&acy;&kcy;&acy;&shcy;?&ldquo; &pcy;&ocy;&kcy;&acy;&zhcy;&ucy;&vcy;&acy; &dcy;&iecy;&kcy;&acy; &zcy;&acy; &ucy;&scy;&pcy;&iecy;&shcy;&iecy;&ncy; &bcy;&icy;&zcy;&ncy;&icy;&scy; &ncy;&iecy; &iecy; &pcy;&ocy;&tcy;&rcy;&iecy;&bcy;&iecy;&ncy; &gcy;&ocy;&lcy;&iecy;&mcy; &pcy;&ocy;&chcy;&iecy;&tcy;&ocy;&kcy; &ndash; &tcy;&ucy;&kcy;&ucy; &dcy;&ocy;&bcy;&rcy;&acy; &icy;&dcy;&iecy;&jsercy;&acy;, &pcy;&ocy;&scy;&vcy;&iecy;&tcy;&iecy;&ncy;&ocy;&scy;&tcy; &icy; &zhcy;&iecy;&lcy;&bcy;&acy; &pcy;&ocy;&scy;&tcy;&ocy;&jsercy;&acy;&ncy;&ocy; &dcy;&acy; &scy;&iecy; &ocy;&dcy;&icy; &ncy;&acy;&pcy;&rcy;&iecy;&dcy;.
+       </p>
+<!--    <p>-->
+<!--     &Scy;&iecy;&kcy;&ocy;&jsercy;&acy; &ucy;&scy;&pcy;&iecy;&shcy;&ncy;&acy; &pcy;&rcy;&icy;&kcy;&acy;&zcy;&ncy;&acy; &zcy;&acy;&pcy;&ocy;&chcy;&ncy;&ucy;&vcy;&acy; &scy;&ocy; &mcy;&acy;&lcy;&acy; &icy;&dcy;&iecy;&jsercy;&acy;. &Ncy;&acy;&shcy;&acy;&tcy;&acy; &zcy;&acy;&pcy;&ocy;&chcy;&ncy;&acy; &scy;&ocy; &ljcy;&ucy;&bcy;&ocy;&vcy; &kcy;&ocy;&ncy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy;&tcy;&iecy; &icy; &zhcy;&iecy;&lcy;&bcy;&acy; &dcy;&acy; &scy;&ocy;&zcy;&dcy;&acy;&dcy;&iecy;&mcy;&iecy; &ncy;&iecy;&shcy;&tcy;&ocy; &pcy;&ocy;&rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ocy;.-->
+<!--     <br/>-->
+<!--     <br/>-->
+<!--     &Vcy;&ocy; 2020 &gcy;&ocy;&dcy;&icy;&ncy;&acy;, &bdquo;&Scy;&acy;&kcy;&acy;&shcy;?&ldquo; &zcy;&acy;&pcy;&ocy;&chcy;&ncy;&acy; &kcy;&acy;&kcy;&ocy; &mcy;&acy;&lcy; &scy;&iecy;&zcy;&ocy;&ncy;&scy;&kcy;&icy; &bcy;&icy;&zcy;&ncy;&icy;&scy; &vcy;&ocy; &Icy;&lcy;&icy;&ncy;&dcy;&iecy;&ncy;, &vcy;&ocy; &dcy;&rcy;&vcy;&iecy;&ncy; &kcy;&icy;&ocy;&scy;&kcy; &ocy;&dcy; &scy;&acy;&mcy;&ocy; &ncy;&iecy;&kcy;&ocy;&lcy;&kcy;&ucy; &kcy;&vcy;&acy;&dcy;&rcy;&acy;&tcy;&ncy;&icy; &mcy;&iecy;&tcy;&rcy;&icy;. &Icy;&dcy;&iecy;&jsercy;&acy;&tcy;&acy; &bcy;&iecy;&shcy;&iecy; &iecy;&dcy;&ncy;&ocy;&scy;&tcy;&acy;&vcy;&ncy;&acy; &ndash; &dcy;&acy; &scy;&iecy; &scy;&ocy;&zcy;&dcy;&acy;&dcy;&acy;&tcy; &vcy;&kcy;&ucy;&scy;&ncy;&icy; &icy; &kcy;&rcy;&iecy;&acy;&tcy;&icy;&vcy;&ncy;&icy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy; &kcy;&ocy;&icy; &kjcy;&iecy; &gcy;&icy; &ncy;&acy;&tcy;&iecy;&rcy;&acy;&acy;&tcy; &lcy;&ucy;&gjcy;&iecy;&tcy;&ocy; &pcy;&ocy;&vcy;&tcy;&ocy;&rcy;&ncy;&ocy; &dcy;&acy; &scy;&iecy; &vcy;&rcy;&acy;&tcy;&acy;&tcy;.-->
+<!--     <br/>-->
+<!--     <br/>-->
+<!--     &Ocy;&ncy;&acy; &shcy;&tcy;&ocy; &pcy;&rcy;&vcy;&icy;&chcy;&ncy;&ocy; &tcy;&rcy;&iecy;&bcy;&acy;&lcy;&ocy; &dcy;&acy; &bcy;&icy;&dcy;&iecy; &lcy;&iecy;&tcy;&ncy;&acy; &pcy;&rcy;&icy;&kcy;&acy;&zcy;&ncy;&acy;, &mcy;&ncy;&ocy;&gcy;&ucy; &bcy;&rcy;&zcy;&ocy; &pcy;&rcy;&iecy;&rcy;&acy;&scy;&ncy;&acy; &vcy;&ocy; &ncy;&iecy;&shcy;&tcy;&ocy; &pcy;&ocy;&gcy;&ocy;&lcy;&iecy;&mcy;&ocy;.-->
+<!--            &Ocy;&dcy; &mcy;&acy;&lcy; &kcy;&icy;&ocy;&scy;&kcy; &dcy;&ocy; &pcy;&rcy;&iecy;&pcy;&ocy;&zcy;&ncy;&acy;&tcy;&lcy;&icy;&vcy;&ocy; &icy;&mcy;&iecy; &vcy;&ocy; &scy;&kcy;&ocy;&pcy;&scy;&kcy;&acy;&tcy;&acy; &gcy;&acy;&scy;&tcy;&rcy;&ocy;&ncy;&ocy;&mcy;&scy;&kcy;&acy; &scy;&tscy;&iecy;&ncy;&acy;, &pcy;&rcy;&icy;&kcy;&acy;&zcy;&ncy;&acy;&tcy;&acy; &ncy;&acy; &bdquo;&Scy;&acy;&kcy;&acy;&shcy;?&ldquo; &pcy;&ocy;&kcy;&acy;&zhcy;&ucy;&vcy;&acy; &dcy;&iecy;&kcy;&acy; &zcy;&acy; &ucy;&scy;&pcy;&iecy;&shcy;&iecy;&ncy; &bcy;&icy;&zcy;&ncy;&icy;&scy; &ncy;&iecy; &iecy; &pcy;&ocy;&tcy;&rcy;&iecy;&bcy;&iecy;&ncy; &gcy;&ocy;&lcy;&iecy;&mcy; &pcy;&ocy;&chcy;&iecy;&tcy;&ocy;&kcy; &ndash; &tcy;&ucy;&kcy;&ucy; &dcy;&ocy;&bcy;&rcy;&acy; &icy;&dcy;&iecy;&jsercy;&acy;, &pcy;&ocy;&scy;&vcy;&iecy;&tcy;&iecy;&ncy;&ocy;&scy;&tcy; &icy; &zhcy;&iecy;&lcy;&bcy;&acy; &pcy;&ocy;&scy;&tcy;&ocy;&jsercy;&acy;&ncy;&ocy; &dcy;&acy; &scy;&iecy; &ocy;&dcy;&icy; &ncy;&acy;&pcy;&rcy;&iecy;&dcy;.-->
+<!--    </p>-->
+    <div class="about-features">
+     <div>
+      <strong>
+       100%
+      </strong>
+      <span data-i18n="freshIngredients">
+       &Scy;&vcy;&iecy;&zhcy;&icy; &scy;&ocy;&scy;&tcy;&ocy;&jsercy;&kcy;&icy;
+      </span>
+     </div>
+     <div>
+      <strong>
+       20+
+      </strong>
+      <span data-i18n="flavors">
+       &Vcy;&kcy;&ucy;&scy;&ocy;&vcy;&icy;
+      </span>
+     </div>
+     <div>
+      <strong>
+       4.7&starf;
+      </strong>
+      <span data-i18n="happyGuests">
+       &Zcy;&acy;&dcy;&ocy;&vcy;&ocy;&lcy;&ncy;&icy; &gcy;&ocy;&scy;&tcy;&icy;
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ================= MENU ================= -->
+  <!-- ================= MENU ================= -->
+  <section class="menu" id="menu">
+   <div class="section-heading">
+    <p class="section-label" data-i18n="menuLabel">
+     &Ncy;&Acy;&SHcy;&IEcy; &Mcy;&IEcy;&Ncy;&Icy;
+    </p>
+    <h2 data-i18n="menuTitle">
+     &Pcy;&rcy;&ocy;&ncy;&acy;&jsercy;&dcy;&icy; &gcy;&ocy; &scy;&vcy;&ocy;&jsercy;&ocy;&tcy;
+     <span>
+      &ocy;&mcy;&icy;&lcy;&iecy;&ncy; &vcy;&kcy;&ucy;&scy;.
+     </span>
+    </h2>
+    <p data-i18n="menuText">
+     &Icy;&zcy;&bcy;&iecy;&rcy;&icy; &ocy;&dcy; &ncy;&acy;&shcy;&acy;&tcy;&acy; &pcy;&ocy;&ncy;&ucy;&dcy;&acy; &icy;&lcy;&icy; &scy;&ocy;&zcy;&dcy;&acy;&dcy;&icy; &jsercy;&acy;
+            &scy;&vcy;&ocy;&jsercy;&acy;&tcy;&acy; &scy;&ocy;&vcy;&rcy;&shcy;&iecy;&ncy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&acy;.
+    </p>
+   </div>
+   <!-- ================= CREAMCAKE ================= -->
+   <div class="menu-section">
+    <div class="menu-title">
+     <div>
+      <h3 data-i18n="cat_creamcake">
+       Creamcake
+      </h3>
+     </div>
+    </div>
+    <div class="products-grid">
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_0_name">
+        Creamcake 1
+       </h4>
+       <p data-i18n="product_0_desc">
+        &Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        Lotus &kcy;&rcy;&iecy;&mcy; + &kcy;&acy;&rcy;&acy;&mcy;&iecy;&lcy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;
+       </p>
+       <strong>
+        MKD 300
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Creamcake 1" src="https://imageproxy.wolt.com/assets/6a47cf71bfca82b2f11762d9?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_1_name">
+        Creamcake 2
+       </h4>
+       <p data-i18n="product_1_desc">
+        &Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        &kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy; + &dcy;&rcy;&ocy;&bcy;&iecy;&ncy; &kcy;&iecy;&kcy;&scy;
+       </p>
+       <strong>
+        MKD 280
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Creamcake 2" src="https://imageproxy.wolt.com/assets/6a47cfafdbbb66c8e4085c1f?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_2_name">
+        Creamcake 3
+       </h4>
+       <p data-i18n="product_2_desc">
+        &Bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        &Fcy;'&scy;&tcy;&acy;&kcy; &kcy;&rcy;&iecy;&mcy; + &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;
+       </p>
+       <strong>
+        MKD 280
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Creamcake 3" src="https://imageproxy.wolt.com/assets/6a47cf90bfca82b2f11762df?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_3_name">
+        Raspberry Creamcake 1
+       </h4>
+       <p data-i18n="product_3_desc">
+        &Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        &mcy;&acy;&lcy;&icy;&ncy;&icy; + &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;
+       </p>
+       <strong>
+        MKD 310
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Raspberry Creamcake 1" src="https://imageproxy.wolt.com/assets/6a465c6e6d36cf43d976db61?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_4_name">
+        Raspberry Creamcake 2
+       </h4>
+       <p data-i18n="product_4_desc">
+        &Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        &mcy;&acy;&lcy;&icy;&ncy;&icy; + &iecy;&kcy;&scy;&tcy;&rcy;&acy; &Fcy;'&scy;&tcy;&acy;&kcy; &kcy;&rcy;&iecy;&mcy; +
+                        &kcy;&acy;&rcy;&acy;&mcy;&iecy;&lcy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;
+       </p>
+       <strong>
+        MKD 350
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Raspberry Creamcake 2" src="https://imageproxy.wolt.com/assets/6a465c806d36cf43d976db69?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_5_name">
+        Raspberry Creamcake 3
+       </h4>
+       <p data-i18n="product_5_desc">
+        &Bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy; + &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy; &vcy;&ocy; &mcy;&lcy;&iecy;&kcy;&ocy; +
+                        &mcy;&acy;&lcy;&icy;&ncy;&icy; + &iecy;&kcy;&scy;&tcy;&rcy;&acy; &bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy; +
+                        &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;
+       </p>
+       <strong>
+        MKD 350
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="Raspberry Creamcake 3" src="https://imageproxy.wolt.com/assets/6a465c516d36cf43d976db5b?w=960"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- ================= PREDLOG KOMBINACIJA ================= -->
+   <div class="menu-section">
+    <div class="menu-title">
+     <div>
+      <h3 data-i18n="cat_suggested">
+       &Pcy;&rcy;&iecy;&dcy;&lcy;&ocy;&gcy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy;
+      </h3>
+     </div>
+    </div>
+    <div class="products-grid">
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_6_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 1
+       </h4>
+       <p data-i18n="product_6_desc">
+        &Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;, &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;,
+                        &bcy;&acy;&ncy;&acy;&ncy;&acy;
+       </p>
+       <strong>
+        MKD 230
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 1" src="https://imageproxy.wolt.com/assets/69e1e561d7b09fdf1270f91b?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_7_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 2
+       </h4>
+       <p data-i18n="product_7_desc">
+        &Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;, &bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy;,
+                        &kcy;&acy;&rcy;&acy;&mcy;&iecy;&lcy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;
+       </p>
+       <strong>
+        MKD 230
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 2" src="https://imageproxy.wolt.com/assets/69e1e571d7b09fdf1270f920?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_8_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 3
+       </h4>
+       <p data-i18n="product_8_desc">
+        &Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;, &kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy;
+                        &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy;, &mcy;&acy;&lcy;&icy;&ncy;&acy; &ncy;&acy;&mcy;&acy;&zcy;,
+                        &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;
+       </p>
+       <strong>
+        MKD 260
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 3" src="https://imageproxy.wolt.com/assets/69e1e7efd7b09fdf1270fade?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_9_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 4
+       </h4>
+       <p data-i18n="product_9_desc">
+        Lotuso &kcy;&rcy;&iecy;&mcy;, &ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;,
+                        &jsercy;&acy;&gcy;&ocy;&dcy;&acy; &ncy;&acy;&mcy;&acy;&zcy;, &kcy;&acy;&rcy;&acy;&mcy;&iecy;&lcy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;
+       </p>
+       <strong>
+        MKD 270
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 4" src="https://imageproxy.wolt.com/assets/69e1e803d7b09fdf1270fae9?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_10_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 5
+       </h4>
+       <p data-i18n="product_10_desc">
+        &Bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy; + &ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy; +
+                        &mcy;&iecy;&lcy;&iecy;&ncy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;
+       </p>
+       <strong>
+        MKD 240
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 5" src="https://imageproxy.wolt.com/assets/69e1e819488442231bbbb277?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_11_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 6
+       </h4>
+       <p data-i18n="product_11_desc">
+        &Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;, &ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;,
+                        &dcy;&rcy;&ocy;&bcy;&iecy;&ncy; &kcy;&iecy;&kcy;&scy;, &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ncy;&icy; &bcy;&ocy;&ncy;&bcy;&ocy;&ncy;&icy;
+       </p>
+       <strong>
+        MKD 280
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 6" src="https://imageproxy.wolt.com/assets/69e1e82c488442231bbbb279?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_12_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 7
+       </h4>
+       <p data-i18n="product_12_desc">
+        &Kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy;,
+                        &bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy;, &fcy;'&scy;&tcy;&acy;&kcy; &kcy;&rcy;&iecy;&mcy;,
+                        &lcy;&iecy;&shcy;&ncy;&icy;&tscy;&icy;
+       </p>
+       <strong>
+        MKD 280
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 7" src="https://imageproxy.wolt.com/assets/69e1e8470a27c28a247271df?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_13_name">
+        &Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 8
+       </h4>
+       <p data-i18n="product_13_desc">
+        &Fcy;'&scy;&tcy;&acy;&kcy; &kcy;&rcy;&iecy;&mcy;, &bcy;&ucy;&iecy;&ncy;&ocy; &kcy;&rcy;&iecy;&mcy;,
+                        &mcy;&iecy;&lcy;&iecy;&ncy;&acy; &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&acy;
+       </p>
+       <strong>
+        MKD 260
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 8" src="https://imageproxy.wolt.com/assets/69e1e8600a27c28a247271e4?w=960"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- ================= PROTEINSKI ================= -->
+   <div class="menu-section">
+    <div class="menu-title">
+     <div>
+      <h3 data-i18n="cat_protein">
+       &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&icy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy;
+      </h3>
+     </div>
+    </div>
+    <div class="products-grid">
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_14_name">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 1
+       </h4>
+       <p data-i18n="product_14_desc">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&icy; &tscy;&rcy;&ncy; &kcy;&rcy;&iecy;&mcy;,
+                        &pcy;&ucy;&tcy;&iecy;&rcy; &ocy;&dcy; &kcy;&icy;&kcy;&icy;&rcy;&icy;&kcy;&icy;
+       </p>
+       <strong>
+        MKD 270
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 1" src="https://imageproxy.wolt.com/assets/69e1e753d7b09fdf1270fab4?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_15_name">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 2
+       </h4>
+       <p data-i18n="product_15_desc">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&icy; &bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;,
+                        &pcy;&ucy;&tcy;&iecy;&rcy; &ocy;&dcy; &kcy;&icy;&kcy;&icy;&rcy;&icy;&kcy;&icy;
+       </p>
+       <strong>
+        MKD 270
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 2" src="https://imageproxy.wolt.com/assets/69e1e738d7b09fdf1270faab?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_16_name">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 3
+       </h4>
+       <p data-i18n="product_16_desc">
+        &Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&icy; &tscy;&rcy;&ncy; &kcy;&rcy;&iecy;&mcy;,
+                        &pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&icy; &bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;,
+                        &lcy;&iecy;&shcy;&ncy;&icy;&kcy;
+       </p>
+       <strong>
+        MKD 310
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Pcy;&rcy;&ocy;&tcy;&iecy;&icy;&ncy;&scy;&kcy;&acy; &kcy;&ocy;&mcy;&bcy;&icy;&ncy;&acy;&tscy;&icy;&jsercy;&acy; 3" src="https://imageproxy.wolt.com/assets/69e1e72a0a27c28a24727196?w=960"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- ================= SOSTAVI SAM ================= -->
+   <div class="menu-section custom-section">
+    <div class="menu-title">
+     <div>
+      <h3 data-i18n="cat_buildYourOwn">
+       &Scy;&ocy;&scy;&tcy;&acy;&vcy;&icy; &scy;&acy;&mcy;
+      </h3>
+     </div>
+    </div>
+    <div class="products-grid">
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_17_name">
+        &Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;
+       </h4>
+       <p data-i18n="product_17_desc">
+        &Kcy;&rcy;&iecy;&mcy; &scy;&ocy; &vcy;&kcy;&ucy;&scy; &ncy;&acy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy; &icy; &lcy;&iecy;&shcy;&ncy;&icy;&kcy;.
+       </p>
+       <strong>
+        MKD 170
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Ncy;&ocy;&chcy;&icy;&lcy;&acy; &kcy;&rcy;&iecy;&mcy;" src="https://imageproxy.wolt.com/assets/69e1f8f6d7b09fdf127110e2?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_18_name">
+        &Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;
+       </h4>
+       <p data-i18n="product_18_desc">
+        &Ncy;&iecy;&zhcy;&iecy;&ncy; &bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;.
+       </p>
+       <strong>
+        MKD 170
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Bcy;&iecy;&lcy; &kcy;&rcy;&iecy;&mcy;" src="https://imageproxy.wolt.com/assets/69e1e9610a27c28a24727213?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_19_name">
+        &Lcy;&ocy;&tcy;&ucy;&scy;&ocy; &kcy;&rcy;&iecy;&mcy;
+       </h4>
+       <p data-i18n="product_19_desc">
+        &Kcy;&rcy;&iecy;&mcy; &scy;&ocy; &vcy;&kcy;&ucy;&scy; &ncy;&acy; Lotus &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&icy;.
+       </p>
+       <strong>
+        MKD 180
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Lcy;&ocy;&tcy;&ucy;&scy;&ocy; &kcy;&rcy;&iecy;&mcy;" src="https://imageproxy.wolt.com/assets/69e1f97b0a27c28a24727bac?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_20_name">
+        &Kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy;
+       </h4>
+       <p data-i18n="product_20_desc">
+        &Bcy;&ocy;&gcy;&acy;&tcy; &kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy;.
+       </p>
+       <strong>
+        MKD 170
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&rcy;&iecy;&mcy; &ocy;&dcy; &tcy;&iecy;&mcy;&ncy;&ocy; &chcy;&ocy;&kcy;&ocy;&lcy;&acy;&dcy;&ocy;" src="https://imageproxy.wolt.com/assets/69e1f98a0a27c28a24727baf?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_21_name">
+        &Kcy;&rcy;&iecy;&mcy; &Bcy;&ucy;&iecy;&ncy;&ocy;
+       </h4>
+       <p data-i18n="product_21_desc">
+        &Kcy;&rcy;&iecy;&mcy; &scy;&ocy; &vcy;&kcy;&ucy;&scy; &ncy;&acy; Bueno.
+       </p>
+       <strong>
+        MKD 180
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&rcy;&iecy;&mcy; &Bcy;&ucy;&iecy;&ncy;&ocy;" src="https://imageproxy.wolt.com/assets/68245a88eae52ee4ad215e40?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_22_name">
+        &Kcy;&rcy;&iecy;&mcy; &Ncy;&ucy;&tcy;&iecy;&lcy;&acy;
+       </h4>
+       <p data-i18n="product_22_desc">
+        &Kcy;&lcy;&acy;&scy;&icy;&chcy;&iecy;&ncy; &kcy;&rcy;&iecy;&mcy; &ocy;&dcy; Nutella.
+       </p>
+       <strong>
+        MKD 200
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&rcy;&iecy;&mcy; &Ncy;&ucy;&tcy;&iecy;&lcy;&acy;" src="https://imageproxy.wolt.com/assets/68245a750fde75c474ee055e?w=960"/>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="product-info">
+       <h4 data-i18n="product_23_name">
+        &Kcy;&rcy;&iecy;&mcy; &Fcy;'&scy;&tcy;&acy;&kcy;
+       </h4>
+       <p data-i18n="product_23_desc">
+        &Kcy;&rcy;&iecy;&mcy; &scy;&ocy; &vcy;&kcy;&ucy;&scy; &ncy;&acy; &fcy;'&scy;&tcy;&acy;&kcy;.
+       </p>
+       <strong>
+        MKD 200
+       </strong>
+      </div>
+      <div class="product-image">
+       <img alt="&Kcy;&rcy;&iecy;&mcy; &Fcy;'&scy;&tcy;&acy;&kcy;" src="https://imageproxy.wolt.com/assets/68245a980fde75c474ee0565?w=960"/>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ================= TEAM ================= -->
+  <section class="team" id="team">
+   <div class="section-heading">
+    <p class="section-label" data-i18n="teamLabel">
+     &Ncy;&Acy;&SHcy;&Icy;&Ocy;&Tcy; &Tcy;&Icy;&Mcy;
+    </p>
+    <h2 data-i18n="teamTitle">
+     &Lcy;&ucy;&gjcy;&iecy;&tcy;&ocy; &zcy;&acy;&dcy;
+     <span>
+      &vcy;&kcy;&ucy;&scy;&ocy;&tcy;.
+     </span>
+    </h2>
+    <p data-i18n="teamText">
+     &Zcy;&acy;&pcy;&ocy;&zcy;&ncy;&acy;&jsercy;&tcy;&iecy; &gcy;&ocy; &tcy;&icy;&mcy;&ocy;&tcy; &kcy;&ocy;&jsercy; &scy;&iecy;&kcy;&ocy;&jsercy; &dcy;&iecy;&ncy; &gcy;&icy; &pcy;&ocy;&dcy;&gcy;&ocy;&tcy;&vcy;&ucy;&vcy;&acy;
+            &vcy;&acy;&shcy;&icy;&tcy;&iecy; &ocy;&mcy;&icy;&lcy;&iecy;&ncy;&icy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy;.
+     <br/>
+     &Ncy;&acy;&dcy; 40 &mcy;&lcy;&acy;&dcy;&icy; &icy; &mcy;&ocy;&tcy;&icy;&vcy;&icy;&rcy;&acy;&ncy;&icy; &lcy;&ucy;&gjcy;&iecy; &scy;&iecy;&kcy;&ocy;&jsercy;&dcy;&ncy;&iecy;&vcy;&ncy;&ocy; &scy;&iecy; &gcy;&rcy;&icy;&zhcy;&acy;&tcy; &zcy;&acy; &vcy;&kcy;&ucy;&scy;&ocy;&tcy; &icy; &iecy;&ncy;&iecy;&rcy;&gcy;&icy;&jsercy;&acy;&tcy;&acy; &ncy;&acy; &Scy;&acy;&kcy;&acy;&shcy;.
+    </p>
+   </div>
+   <div class="team-container">
+    <div class="team-card">
+     <div class="team-photo">
+      <img height="230px" src="aleksandra.png" width="90%"/>
+     </div>
+     <h3 data-i18n="team_0_name">
+      &Acy;&lcy;&iecy;&kcy;&scy;&acy;&ncy;&dcy;&rcy;&acy; &Ncy;&acy;&scy;&iecy;&vcy;&scy;&kcy;&acy;
+     </h3>
+     <p data-i18n="team_0_role">
+      &Scy;&ocy;&scy;&ocy;&pcy;&scy;&tcy;&vcy;&iecy;&ncy;&icy;&kcy;
+     </p>
+    </div>
+    <div class="team-card owner-card">
+     <div class="team-photo" style="height: 350px">
+      <img height="330px" src="gordon.png" style="border-radius: 20px" width="100%"/>
+     </div>
+     <h3 data-i18n="team_1_name">
+      &Gcy;&ocy;&rcy;&dcy;&acy;&ncy; &Mcy;&icy;&lcy;&iecy;&ncy;&kcy;&ocy;&vcy;&scy;&kcy;&icy;
+     </h3>
+     <p data-i18n="team_1_role">
+      &Scy;&ocy;&pcy;&scy;&tcy;&vcy;&iecy;&ncy;&icy;&kcy;
+     </p>
+    </div>
+    <div class="team-card">
+     <div class="team-photo">
+      <img height="210px" src="sarche.png" width="80%"/>
+     </div>
+     <h3 data-i18n="team_2_name">
+      &Scy;&acy;&rcy;&acy; &Pcy;&iecy;&tcy;&kcy;&ocy;&vcy;&scy;&kcy;&acy;
+     </h3>
+     <p data-i18n="team_2_role">
+      &Vcy;&rcy;&acy;&bcy;&ocy;&tcy;&iecy;&ncy; &ncy;&acy; &gcy;&ocy;&dcy;&icy;&ncy;&acy;&tcy;&acy;
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- ================= LOCATIONS ================= -->
+  <section class="locations" id="locations">
+   <div class="section-heading">
+    <p class="section-label" data-i18n="locationsLabel">
+     &Kcy;&Acy;&Dcy;&IEcy; &Dcy;&Acy; &Ncy;&Egrave; &Ncy;&Acy;&Jsercy;&Dcy;&IEcy;&Tcy;&IEcy;
+    </p>
+    <h2 data-i18n="locationsTitle">
+     &Pcy;&ocy;&scy;&iecy;&tcy;&iecy;&tcy;&iecy; &ncy;&egrave; &ncy;&acy;
+     <span>
+      &vcy;&acy;&shcy;&acy;&tcy;&acy; &ocy;&mcy;&icy;&lcy;&iecy;&ncy;&acy; &lcy;&ocy;&kcy;&acy;&tscy;&icy;&jsercy;&acy;.
+     </span>
+    </h2>
+    <p data-i18n="locationsText">
+     &Icy;&zcy;&bcy;&iecy;&rcy;&iecy;&tcy;&iecy; &jsercy;&acy; &lcy;&ocy;&kcy;&acy;&tscy;&icy;&jsercy;&acy;&tcy;&acy; &kcy;&ocy;&jsercy;&acy; &vcy;&icy; &iecy; &ncy;&acy;&jsercy;&bcy;&lcy;&icy;&scy;&kcy;&ucy;.
+    </p>
+   </div>
+   <div class="locations-container">
+    <div class="location-card">
+     <div class="location-icon">
+      📍
+     </div>
+     <h3 data-i18n="location_0_name">
+      &Acy;&iecy;&rcy;&ocy;&dcy;&rcy;&ocy;&mcy;
+     </h3>
+     <p data-i18n="location_0_address">
+      &Fcy;&rcy;&acy;&njcy;&ocy; &Kcy;&lcy;&ucy;&zcy; 16, &Scy;&kcy;&ocy;&pcy;&jsercy;&iecy; 1000
+     </p>
+     <p data-i18n="location_0_hours">
+      <strong style="color: #D5A51E; font-size: larger">
+       &Rcy;&acy;&bcy;&ocy;&tcy;&ncy;&ocy; &vcy;&rcy;&iecy;&mcy;&iecy;
+      </strong>
+      <br/>
+      &Pcy;&ocy;&ncy;&iecy;&dcy;&iecy;&lcy;&ncy;&icy;&kcy; - &Scy;&acy;&bcy;&ocy;&tcy;&acy;
+      <br/>
+      10:00 - 23:00
+     </p>
+     <p data-i18n="location_0_phone">
+      <span>
+       📞
+      </span>
+      070-399-957
+     </p>
+     <a class="location-button" data-i18n="viewLocation" href="https://www.google.com/maps/search/?api=1&amp;query=Sakash+Aerodrom+Skopje" target="_blank">
+      &Pcy;&ocy;&gcy;&lcy;&iecy;&dcy;&ncy;&icy; &lcy;&ocy;&kcy;&acy;&tscy;&icy;&jsercy;&acy; &rarr;
+     </a>
+    </div>
+    <div class="location-card">
+     <div class="location-icon">
+      📍
+     </div>
+     <h3 data-i18n="location_1_name">
+      East Gate
+     </h3>
+     <p data-i18n="location_1_address">
+      &Bcy;&iecy;&lcy;&acy;&scy;&icy;&tscy;&acy; 2, &Scy;&kcy;&ocy;&pcy;&jsercy;&iecy;
+     </p>
+     <p data-i18n="location_1_hours">
+      <strong style="color: #D5A51E; font-size: larger">
+       &Rcy;&acy;&bcy;&ocy;&tcy;&ncy;&ocy; &vcy;&rcy;&iecy;&mcy;&iecy;
+      </strong>
+      <br/>
+      &Pcy;&ocy;&ncy;&iecy;&dcy;&iecy;&lcy;&ncy;&icy;&kcy; - &Ncy;&iecy;&dcy;&iecy;&lcy;&acy;
+      <br/>
+      10:00 - 22:00
+     </p>
+     <p data-i18n="location_1_phone">
+      <span>
+       📞
+      </span>
+      070-266-125
+     </p>
+     <a class="location-button" data-i18n="viewLocation" href="https://www.google.com/maps/search/?api=1&amp;query=Sakash+East+Gate+Skopje" target="_blank">
+      &Pcy;&ocy;&gcy;&lcy;&iecy;&dcy;&ncy;&icy; &lcy;&ocy;&kcy;&acy;&tscy;&icy;&jsercy;&acy; &rarr;
+     </a>
+    </div>
+    <div class="location-card">
+     <div class="location-icon">
+      📍
+     </div>
+     <h3 data-i18n="location_2_name">
+      &Icy;&lcy;&icy;&ncy;&dcy;&iecy;&ncy;
+     </h3>
+     <p data-i18n="location_2_address">
+      &Acy;&vcy;&tcy;&ocy;&bcy;&ucy;&scy;&kcy;&acy; &pcy;&ocy;&scy;&tcy;&ocy;&jsercy;&kcy;&acy;, &Mcy;&acy;&rcy;&icy;&ncy;&ocy;
+     </p>
+
+     <p data-i18n="location_2_hours">
+      <strong style="color: #D5A51E; font-size: larger">
+       &Rcy;&acy;&bcy;&ocy;&tcy;&ncy;&ocy; &vcy;&rcy;&iecy;&mcy;&iecy;
+      </strong>
+      <br/>
+      &Vcy;&tcy;&ocy;&rcy;&ncy;&icy;&kcy; - &Ncy;&iecy;&dcy;&iecy;&lcy;&acy;
+      <br/>
+      10:00 - 23:00
+     </p>
+     <p data-i18n="location_2_phone">
+      <span>
+       📞
+      </span>
+      078-541-436
+     </p>
+     <a class="location-button" data-i18n="viewLocation" href="https://www.google.com/maps/search/?api=1&amp;query=Sakash+Ilinden+Skopje" target="_blank">
+      &Pcy;&ocy;&gcy;&lcy;&iecy;&dcy;&ncy;&icy; &lcy;&ocy;&kcy;&acy;&tscy;&icy;&jsercy;&acy; &rarr;
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- ================= NEWS ================= -->
+  <section class="news" id="news">
+   <div class="section-heading">
+    <p class="section-label" data-i18n="newsLabel">
+     &Ncy;&Ocy;&Vcy;&Ocy;&Scy;&Tcy;&Icy;
+    </p>
+    <h2 data-i18n="newsTitle">
+     &SHcy;&tcy;&ocy; &iecy; &ncy;&ocy;&vcy;&ocy; &vcy;&ocy;
+     <span>
+      &Scy;&acy;&kcy;&acy;&shcy;?
+     </span>
+    </h2>
+   </div>
+   <div class="news-container">
+    <article class="news-card">
+     <div class="news-image">
+      <img height="200" src="sakash-seckani.jpg"/>
+     </div>
+     <div class="news-content">
+      <p class="date"  data-i18n="news_0_date">
+       01 &Scy;&IEcy;&Pcy;&Tcy;&IEcy;&Mcy;&Vcy;&Rcy;&Icy; 2026
+      </p>
+      <h3 data-i18n="news_0_title">
+       &Scy;&iecy;&tscy;&kcy;&acy;&ncy;&icy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy;
+      </h3>
+      <p data-i18n="news_0_text">
+       &Ucy;&zhcy;&icy;&vcy;&acy;&jsercy;&tcy;&iecy; &vcy;&ocy; &ocy;&mcy;&icy;&lcy;&iecy;&ncy;&acy;&tcy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&acy; &kcy;&acy;&dcy;&iecy; &icy; &dcy;&acy; &scy;&tcy;&iecy;! &Pcy;&rcy;&acy;&kcy;&tcy;&icy;&chcy;&ncy;&acy; &zcy;&acy; &jsercy;&acy;&dcy;&iecy;&njcy;&iecy; &icy; &scy;&ocy;&vcy;&rcy;&shcy;&iecy;&ncy;&acy; &zcy;&acy; &vcy;&ocy; &dcy;&vcy;&icy;&zhcy;&iecy;&njcy;&iecy;.
+      </p>
+      <a data-i18n="readMore" href="https://www.instagram.com/p/DcqR3LXAIBZ/?hl=en" target="_blank">
+       &Pcy;&rcy;&ocy;&chcy;&icy;&tcy;&acy;&jsercy; &pcy;&ocy;&vcy;&iecy;&kjcy;&iecy; &rarr;
+      </a>
+     </div>
+    </article>
+    <article class="news-card">
+     <div class="news-image">
+      <img height="200" src="creamcake.png" width="665"/>
+     </div>
+     <div class="news-content">
+      <p class="date" data-i18n="news_1_date">
+       20 &Acy;&Pcy;&Rcy;&Icy;&Lcy; 2026
+      </p>
+      <h3 data-i18n="news_1_title">
+       Lotuzo Creamcake
+      </h3>
+      <p data-i18n="news_1_text">
+       Lotus spread, &bcy;&icy;&scy;&kcy;&vcy;&icy;&tcy;&icy; &icy; &mcy;&ncy;&ocy;&gcy;&ucy;
+                    &ljcy;&ucy;&bcy;&ocy;&vcy; &vcy;&ocy; &iecy;&dcy;&ncy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&acy;.
+      </p>
+      <a data-i18n="readMore" href="https://www.instagram.com/p/DXUuPr6gEer/?hl=en" target="_blank">
+       &Pcy;&rcy;&ocy;&chcy;&icy;&tcy;&acy;&jsercy; &pcy;&ocy;&vcy;&iecy;&kjcy;&iecy; &rarr;
+      </a>
+     </div>
+    </article>
+    <article class="news-card">
+     <div class="news-image">
+      <img src="sakash-challenge.jpg"/>
+     </div>
+     <div class="news-content">
+      <p class="date"  data-i18n="news_2_date">
+       30 &Scy;&IEcy;&Pcy;&Tcy;&IEcy;&Mcy;&Vcy;&Rcy;&Icy; 2025
+      </p>
+      <h3 data-i18n="news_2_title">
+       Sakash Challenge
+      </h3>
+      <p data-i18n="news_2_text">
+       &Icy;&mcy;&acy;&tcy;&iecy; 30 &mcy;&icy;&ncy;&ucy;&tcy;&icy; &dcy;&acy; &jsercy;&acy; &icy;&zcy;&iecy;&dcy;&iecy;&tcy;&iecy; &ocy;&vcy;&acy;&acy; &ocy;&gcy;&rcy;&ocy;&mcy;&ncy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&acy;.
+       <br/>
+       &Acy;&kcy;&ocy; &ucy;&scy;&pcy;&iecy;&iecy;&tcy;&iecy; &ndash; &ncy;&icy;&shcy;&tcy;&ocy; &ncy;&iecy; &pcy;&lcy;&acy;&kjcy;&acy;&tcy;&iecy;.
+       <br/>
+       &Acy;&kcy;&ocy; &ncy;&iecy; &ucy;&scy;&pcy;&iecy;&iecy;&tcy;&iecy; &ndash; &jsercy;&acy; &pcy;&lcy;&acy;&kjcy;&acy;&tcy;&iecy;
+      </p>
+      <a data-i18n="readMore" href="https://www.instagram.com/p/DPO94yPCNNU/" target="_blank">
+       &Pcy;&rcy;&ocy;&chcy;&icy;&tcy;&acy;&jsercy; &pcy;&ocy;&vcy;&iecy;&kjcy;&iecy; &rarr;
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+   <div class="contact-info">
+    <p class="section-label" data-i18n="contactLabel">
+     &Kcy;&Ocy;&Ncy;&Tcy;&Acy;&Kcy;&Tcy;
+    </p>
+    <h2 data-i18n="contactTitle">
+     &Acy;&jsercy;&dcy;&iecy; &dcy;&acy; &scy;&iecy;
+     <span>
+      &zcy;&acy;&scy;&lcy;&acy;&dcy;&icy;&mcy;&iecy;!
+     </span>
+    </h2>
+    <p data-i18n="contactText">
+     &Icy;&mcy;&acy;&tcy;&iecy; &pcy;&rcy;&acy;&shcy;&acy;&njcy;&iecy; &icy;&lcy;&icy; &scy;&acy;&kcy;&acy;&tcy;&iecy; &dcy;&acy; &ncy;&acy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&iecy;
+            &ncy;&acy;&rcy;&acy;&chcy;&kcy;&acy;? &Pcy;&icy;&shcy;&iecy;&tcy;&iecy; &ncy;&icy;.
+    </p>
+    <img height="auto" src="kontakt.png" width="500px"/>
+   </div>
+   <form action="mailto:ivaman2410@gmail.com" class="contact-form" enctype="text/plain" method="post">
+    <input data-i18n-placeholder="namePlaceholder" placeholder="&Icy;&mcy;&iecy; &icy; &pcy;&rcy;&iecy;&zcy;&icy;&mcy;&iecy;" required="" type="text"/>
+    <input data-i18n-placeholder="emailPlaceholder" placeholder="Email &acy;&dcy;&rcy;&iecy;&scy;&acy;" required="" type="email"/>
+    <input data-i18n-placeholder="subjectPlaceholder" placeholder="&Pcy;&rcy;&iecy;&dcy;&mcy;&iecy;&tcy;" required="" type="text"/>
+    <textarea data-i18n-placeholder="messagePlaceholder" placeholder="&Vcy;&acy;&shcy;&acy;&tcy;&acy; &pcy;&ocy;&rcy;&acy;&kcy;&acy;..." required="" rows="5"></textarea>
+    <button data-i18n="sendMessage" type="submit">
+     &Icy;&scy;&pcy;&rcy;&acy;&tcy;&icy; &pcy;&ocy;&rcy;&acy;&kcy;&acy; &rarr;
+    </button>
+   </form>
+  </section>
+  <script>
+   const contactForm = document.querySelector(".contact-form");
+
+    contactForm.addEventListener("submit", function() {
+
+        setTimeout(function() {
+            contactForm.reset();
+        }, 1000);
+
+    });
+  </script>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+   <div class="footer-logo" data-i18n="footerLogo">
+    &Scy;&acy;&kcy;&acy;&shcy;
+    <span>
+     ?
+    </span>
+   </div>
+   <p data-i18n="footerText">
+    &Ncy;&acy;&pcy;&rcy;&acy;&vcy;&iecy;&ncy;&ocy; &scy;&ocy; &ljcy;&ucy;&bcy;&ocy;&vcy; &zcy;&acy; &ljcy;&ucy;&bcy;&icy;&tcy;&iecy;&lcy;&icy;&tcy;&iecy; &ncy;&acy; &pcy;&acy;&lcy;&acy;&chcy;&icy;&ncy;&kcy;&icy;.
+   </p>
+   <div class="socials">
+    <a href="https://www.instagram.com/sakash.mk/?hl=en" target="_blank">
+     Instagram
+    </a>
+    <a href="https://www.facebook.com/sakash.mk/" target="_blank">
+     Facebook
+    </a>
+    <a href="https://www.tiktok.com/@sakash.mk" target="_blank">
+     TikTok
+    </a>
+   </div>
+   <p class="copyright" data-i18n="copyright">
+    &copy; 2026 &Scy;&acy;&kcy;&acy;&shcy;? &Scy;&icy;&tcy;&iecy; &pcy;&rcy;&acy;&vcy;&acy; &scy;&iecy; &zcy;&acy;&dcy;&rcy;&zhcy;&acy;&ncy;&icy;.
+   </p>
+  </footer>
+  <div class="cookie-banner" id="cookie-banner">
+   <div class="cookie-text">
+    <h3 data-i18n="cookieTitle">
+     🍪 &Vcy;&acy;&shcy;&acy;&tcy;&acy; &pcy;&rcy;&icy;&vcy;&acy;&tcy;&ncy;&ocy;&scy;&tcy; &ncy;&icy; &iecy; &vcy;&acy;&zhcy;&ncy;&acy;
+    </h3>
+    <p data-i18n="cookieText">
+     &Kcy;&ocy;&rcy;&icy;&scy;&tcy;&icy;&mcy;&iecy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy; &zcy;&acy; &pcy;&ocy;&dcy;&ocy;&bcy;&rcy;&ocy; &icy; &pcy;&ocy;&pcy;&rcy;&icy;&jsercy;&acy;&tcy;&ncy;&ocy;
+            &icy;&scy;&kcy;&ucy;&scy;&tcy;&vcy;&ocy; &ncy;&acy; &ncy;&acy;&shcy;&acy;&tcy;&acy; &vcy;&iecy;&bcy;-&scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&acy;.
+    </p>
+   </div>
+   <div class="cookie-buttons">
+    <button class="cookie-accept" data-i18n="acceptAll" id="accept-all">
+     &Pcy;&rcy;&icy;&fcy;&acy;&tcy;&icy; &gcy;&icy; &scy;&icy;&tcy;&iecy;
+    </button>
+    <button class="cookie-necessary" data-i18n="necessaryOnly" id="necessary-only">
+     &Scy;&acy;&mcy;&ocy; &ncy;&iecy;&ocy;&pcy;&khcy;&ocy;&dcy;&ncy;&icy;
+    </button>
+    <button class="cookie-customize" data-i18n="customize" id="customize-cookies">
+     &Pcy;&rcy;&icy;&lcy;&acy;&gcy;&ocy;&dcy;&icy;
+    </button>
+   </div>
+  </div>
+  <div class="cookie-settings" id="cookie-settings">
+   <div class="cookie-settings-box">
+    <h2 data-i18n="cookieSettingsTitle">
+     &Pcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy; &zcy;&acy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
+    </h2>
+    <p data-i18n="cookieSettingsText">
+     &Icy;&zcy;&bcy;&iecy;&rcy;&iecy;&tcy;&iecy; &kcy;&ocy;&icy; &tcy;&icy;&pcy;&ocy;&vcy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy; &scy;&acy;&kcy;&acy;&tcy;&iecy; &dcy;&acy; &gcy;&icy; &dcy;&ocy;&zcy;&vcy;&ocy;&lcy;&icy;&tcy;&iecy;.
+    </p>
+    <label data-i18n="necessaryCookies">
+     <input checked="" disabled="" type="checkbox"/>
+     &Ncy;&iecy;&ocy;&pcy;&khcy;&ocy;&dcy;&ncy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
+    </label>
+    <label data-i18n="functionalCookies">
+     <input id="functional-cookies" type="checkbox"/>
+     &Fcy;&ucy;&ncy;&kcy;&tscy;&icy;&ocy;&ncy;&acy;&lcy;&ncy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
+    </label>
+    <label data-i18n="analyticsCookies">
+     <input id="analytics-cookies" type="checkbox"/>
+     &Acy;&ncy;&acy;&lcy;&icy;&tcy;&icy;&chcy;&kcy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
+    </label>
+    <button class="cookie-accept" data-i18n="saveSettings" id="save-cookies">
+     &Zcy;&acy;&chcy;&ucy;&vcy;&acy;&jsercy; &pcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+    </button>
+   </div>
+  </div>
+  <script>
+   const cookieBanner = document.getElementById("cookie-banner");
+    const cookieSettings = document.getElementById("cookie-settings");
+
+    const acceptAll = document.getElementById("accept-all");
+    const necessaryOnly = document.getElementById("necessary-only");
+    const customize = document.getElementById("customize-cookies");
+    const saveCookies = document.getElementById("save-cookies");
+
+
+    // Прифаќање на сите
+    acceptAll.addEventListener("click", function () {
+
+        localStorage.setItem("cookieChoice", "all");
+
+        cookieBanner.style.display = "none";
+
+    });
+
+
+    // Само неопходни
+    necessaryOnly.addEventListener("click", function () {
+
+        localStorage.setItem("cookieChoice", "necessary");
+
+        cookieBanner.style.display = "none";
+
+    });
+
+
+    // Отворање на поставки
+    customize.addEventListener("click", function () {
+
+        cookieSettings.style.display = "flex";
+
+    });
+
+
+    // Зачувување на прилагодени поставки
+    saveCookies.addEventListener("click", function () {
+
+        const functional =
+            document.getElementById("functional-cookies").checked;
+
+        const analytics =
+            document.getElementById("analytics-cookies").checked;
+
+        localStorage.setItem(
+            "cookieChoice",
+            JSON.stringify({
+                functional: functional,
+                analytics: analytics
+            })
+        );
+
+        cookieSettings.style.display = "none";
+        cookieBanner.style.display = "none";
+
+    });
+
+
+    // Ако корисникот веќе избрал
+    if (localStorage.getItem("cookieChoice")) {
+
+        cookieBanner.style.display = "none";
+
+    }
+  </script>
+  <script>
+      const translations = {
+          mk: {
+              // NAVBAR
+              navHome: "Почетна",
+              navAbout: "За нас",
+              navMenu: "Мени",
+              navTeam: "Тим",
+              navLocations: "Локации",
+              navNews: "Новости",
+              navContact: "Контакт",
+
+              // HERO
+              heroLabel: "ДОБРЕДОЈДОВТЕ ВО САКАШ",
+              heroTitle: "Благо не оди во стомак,<br><span>оди во срце!</span>",
+              heroText: "Добредојдовте во Сакаш – местото каде што секоја палачинка е свежо подготвена и создадена за да ви го разубави денот.",
+              viewMenu: "Погледни мени",
+              learnMore: "Дознај повеќе",
+
+              // ABOUT
+              aboutLabel: "ЗА НАС",
+              aboutTitle: "Мало место.<br><span>Голема љубов.</span>",
+              aboutText: "Секоја успешна приказна започнува со мала идеја. Нашата започна со љубов кон палачинките и желба да создадеме нешто поразлично.<br><br>Во 2020 година, „Сакаш?“ започна како мал сезонски бизнис во Илинден, во дрвен киоск од само неколку квадратни метри. Идејата беше едноставна – да се создадат вкусни и креативни палачинки кои ќе ги натераат луѓето повторно да се вратат.<br><br>Она што првично требало да биде летна приказна, многу брзо прерасна во нешто поголемо. Од мал киоск до препознатливо име во скопската гастрономска сцена, приказната на „Сакаш?“ покажува дека за успешен бизнис не е потребен голем почеток – туку добра идеја, посветеност и желба постојано да се оди напред.",
+              freshIngredients: "Свежи состојки",
+              flavors: "Вкусови",
+              happyGuests: "Задоволни гости",
+
+              // MENU
+              menuLabel: "НАШЕ МЕНИ",
+              menuTitle: "Пронајди го својот <span>омилен вкус.</span>",
+              menuText: "Избери од нашата понуда или создади ја својата совршена палачинка.",
+
+              cat_creamcake: "Creamcake",
+              cat_suggested: "Предлог комбинација",
+              cat_protein: "Протеински палачинки",
+              cat_buildYourOwn: "Состави сам",
+
+              // PRODUCTS
+              product_0_name: "Creamcake 1",
+              product_0_desc: "Бел крем + бисквита во млеко + Lotus крем + карамел бисквит",
+
+              product_1_name: "Creamcake 2",
+              product_1_desc: "Ночила крем + бисквита во млеко + крем од темно чоколадо + дробен кекс",
+
+              product_2_name: "Creamcake 3",
+              product_2_desc: "Буено крем + бисквита во млеко + Ф'стак крем + мелена бисквита",
+
+              product_3_name: "Raspberry Creamcake 1",
+              product_3_desc: "Ночила крем + бисквита во млеко + малини + мелена бисквита",
+
+              product_4_name: "Raspberry Creamcake 2",
+              product_4_desc: "Бел крем + бисквита во млеко + малини + екстра Ф'стак крем + карамел бисквит",
+
+              product_5_name: "Raspberry Creamcake 3",
+              product_5_desc: "Буено крем + бисквита во млеко + малини + екстра бел крем + мелена бисквита",
+
+              product_6_name: "Комбинација 1",
+              product_6_desc: "Ночила крем, мелена бисквита, банана",
+
+              product_7_name: "Комбинација 2",
+              product_7_desc: "Бел крем, буено крем, карамел бисквит",
+
+              product_8_name: "Комбинација 3",
+              product_8_desc: "Ночила крем, крем од темно чоколадо, малина намаз, мелена бисквита",
+
+              product_9_name: "Комбинација 4",
+              product_9_desc: "Lotuso крем, ночила крем, јагода намаз, карамел бисквит",
+
+              product_10_name: "Комбинација 5",
+              product_10_desc: "Буено крем + ночила крем + мелен бисквит",
+
+              product_11_name: "Комбинација 6",
+              product_11_desc: "Бел крем, ночила крем, дробен кекс, чоколадни бонбони",
+
+              product_12_name: "Комбинација 7",
+              product_12_desc: "Крем од темно чоколадо, буено крем, ф'стак крем, лешници",
+
+              product_13_name: "Комбинација 8",
+              product_13_desc: "Ф'стак крем, буено крем, мелена бисквита",
+
+              product_14_name: "Протеинска комбинација 1",
+              product_14_desc: "Протеински црн крем, путер од кикирики",
+
+              product_15_name: "Протеинска комбинација 2",
+              product_15_desc: "Протеински бел крем, путер од кикирики",
+
+              product_16_name: "Протеинска комбинација 3",
+              product_16_desc: "Протеински црн крем, протеински бел крем, лешник",
+
+              product_17_name: "Ночила крем",
+              product_17_desc: "Крем со вкус на чоколадо и лешник.",
+
+              product_18_name: "Бел крем",
+              product_18_desc: "Нежен бел крем.",
+
+              product_19_name: "Лотусо крем",
+              product_19_desc: "Крем со вкус на Lotus бисквити.",
+
+              product_20_name: "Крем од темно чоколадо",
+              product_20_desc: "Богат крем од темно чоколадо.",
+
+              product_21_name: "Крем Буено",
+              product_21_desc: "Крем со вкус на Bueno.",
+
+              product_22_name: "Крем Нутела",
+              product_22_desc: "Класичен крем од Nutella.",
+
+              product_23_name: "Крем Ф'стак",
+              product_23_desc: "Крем со вкус на ф'стак.",
+
+              // TEAM
+              teamLabel: "НАШИОТ ТИМ",
+              teamTitle: "Луѓето зад <span>вкусот.</span>",
+              teamText: "Запознајте го тимот кој секој ден ги подготвува вашите омилени палачинки.<br>Над 40 млади и мотивирани луѓе секојдневно се грижат за вкусот и енергијата на Сакаш.",
+
+              team_0_name: "Александра Насевска",
+              team_0_role: "Сосопственик",
+
+              team_1_name: "Гордан Миленковски",
+              team_1_role: "Сопственик",
+
+              team_2_name: "Сара Петковска",
+              team_2_role: "Вработен на годината",
+
+              // LOCATIONS
+              locationsLabel: "КАДЕ ДА НÈ НАЈДЕТЕ",
+              locationsTitle: "Посетете нè на <span>вашата омилена локација.</span>",
+              locationsText: "Изберете ја локацијата која ви е најблиску.",
+              viewLocation: "Погледни локација →",
+
+              location_0_name: "Аеродром",
+              location_0_address: 'Фрањо Клуз 16, Скопје 1000',
+              location_0_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Работно време</strong>
+            <br>
+            Понеделник - Сабота
+            <br>
+            10:00 - 23:00
+        `,
+              location_0_phone: `
+            <span>📞</span>
+            070-399-957
+        `,
+
+              location_1_name: "East Gate",
+              location_1_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Работно време</strong>
+            <br>
+            Понеделник - Недела
+            <br>
+            10:00 - 22:00
+        `,
+              location_1_phone: `
+            <span>📞</span>
+            070-266-125
+        `,
+              location_1_address: 'Беласица 2, Скопје 1000',
+
+
+              location_2_name: "Илинден",
+              location_2_address: 'Автобуска постојка, Марино',
+              location_2_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Работно време</strong>
+            <br>
+            Вторник - Недела
+            <br>
+            10:00 - 23:00
+        `,
+              location_2_phone: `
+            <span>📞</span>
+            078-541-436
+        `,
+
+
+              // NEWS
+              newsLabel: "НОВОСТИ",
+              newsTitle: "Што е ново во <span>Сакаш?</span>",
+              readMore: "Прочитај повеќе →",
+
+              news_0_title: "Сецкани палачинки",
+              news_0_date: '01 СЕПТЕМВРИ 2026',
+              news_0_text: "Уживајте во омилената палачинка каде и да сте! Практична за јадење и совршена за во движење.",
+
+              news_1_title: "Lotuzo Creamcake",
+              news_1_date: '20 АПРИЛ 2026',
+              news_1_text: "Lotus spread, бисквити и многу љубов во една палачинка.",
+
+              news_2_title: "Sakash Challenge",
+              news_2_date: '30 СЕПТЕМВРИ 2025',
+              news_2_text: "Имате 30 минути да ја изедете оваа огромна палачинка.<br>Ако успеете – ништо не плаќате.<br>Ако не успеете – ја плаќате",
+
+              // CONTACT
+              contactLabel: "КОНТАКТ",
+              contactTitle: "Ајде да се <span>засладиме!</span>",
+              contactText: "Имате прашање или сакате да направите нарачка? Пишете ни.",
+
+              namePlaceholder: "Име и презиме",
+              emailPlaceholder: "Email адреса",
+              subjectPlaceholder: "Предмет",
+              messagePlaceholder: "Вашата порака...",
+
+              sendMessage: "Испрати порака →",
+
+              // FOOTER
+              footerLogo: "Сакаш <span>?</span>",
+              footerText: "Направено со љубов за љубителите на палачинки.",
+              copyright: "© 2026 Сакаш? Сите права се задржани.",
+
+              // COOKIES
+              cookieTitle: "🍪 Вашата приватност ни е важна",
+              cookieText: "Користиме колачиња за подобро и попријатно искуство на нашата веб-страница.",
+
+              acceptAll: "Прифати ги сите",
+              necessaryOnly: "Само неопходни",
+              customize: "Прилагоди",
+
+              cookieSettingsTitle: "Поставки за колачиња",
+              cookieSettingsText: "Изберете кои типови колачиња сакате да ги дозволите.",
+
+              necessaryCookies: "Неопходни колачиња",
+              functionalCookies: "Функционални колачиња",
+              analyticsCookies: "Аналитички колачиња",
+
+              saveSettings: "Зачувај поставки"
+          },
+
+
+          en: {
+              // NAVBAR
+              navHome: "Home",
+              navAbout: "About Us",
+              navMenu: "Menu",
+              navTeam: "Team",
+              navLocations: "Locations",
+              navNews: "News",
+              navContact: "Contact",
+
+              // HERO
+              heroLabel: "WELCOME TO SAKASH",
+              heroTitle: "Sweetness doesn't go to the stomach,<br><span>it goes to the heart!</span>",
+              heroText: "Welcome to Sakash – the place where every pancake is freshly prepared and created to brighten your day.",
+              viewMenu: "View menu",
+              learnMore: "Learn more",
+
+              // ABOUT
+              aboutLabel: "ABOUT US",
+              aboutTitle: "Small place.<br><span>Big love.</span>",
+              aboutText: "Every successful story starts with a small idea. Ours started with a love for pancakes and a desire to create something different.<br><br>In 2020, “Sakash?” started as a small seasonal business in Ilinden, in a wooden kiosk of just a few square meters. The idea was simple – to create delicious and creative pancakes that would make people come back again.<br><br>What was originally meant to be a summer story quickly grew into something bigger. From a small kiosk to a recognizable name in Skopje’s food scene, the story of “Sakash?” shows that a successful business does not need a big beginning – just a good idea, dedication and the desire to keep moving forward.",
+              freshIngredients: "Fresh ingredients",
+              flavors: "Flavors",
+              happyGuests: "Happy guests",
+
+              // MENU
+              menuLabel: "OUR MENU",
+              menuTitle: "Find your <span>favorite flavor.</span>",
+              menuText: "Choose from our selection or create your perfect pancake.",
+
+              cat_creamcake: "Creamcake",
+              cat_suggested: "Suggested combinations",
+              cat_protein: "Protein pancakes",
+              cat_buildYourOwn: "Build your own",
+
+              // PRODUCTS
+              product_0_name: "Creamcake 1",
+              product_0_desc: "White cream + biscuit in milk + Lotus cream + caramel biscuit",
+
+              product_1_name: "Creamcake 2",
+              product_1_desc: "Milka cream + biscuit in milk + dark chocolate cream + crushed biscuit",
+
+              product_2_name: "Creamcake 3",
+              product_2_desc: "Bueno cream + biscuit in milk + pistachio cream + ground biscuit",
+
+              product_3_name: "Raspberry Creamcake 1",
+              product_3_desc: "Milka cream + biscuit in milk + raspberries + ground biscuit",
+
+              product_4_name: "Raspberry Creamcake 2",
+              product_4_desc: "White cream + biscuit in milk + raspberries + extra pistachio cream + caramel biscuit",
+
+              product_5_name: "Raspberry Creamcake 3",
+              product_5_desc: "Bueno cream + biscuit in milk + raspberries + extra white cream + ground biscuit",
+
+              product_6_name: "Combination 1",
+              product_6_desc: "Milka cream, ground biscuit, banana",
+
+              product_7_name: "Combination 2",
+              product_7_desc: "White cream, Bueno cream, caramel biscuit",
+
+              product_8_name: "Combination 3",
+              product_8_desc: "Milka cream, dark chocolate cream, raspberry spread, ground biscuit",
+
+              product_9_name: "Combination 4",
+              product_9_desc: "Lotus cream, Milka cream, strawberry spread, caramel biscuit",
+
+              product_10_name: "Combination 5",
+              product_10_desc: "Bueno cream + Milka cream + ground biscuit",
+
+              product_11_name: "Combination 6",
+              product_11_desc: "White cream, Milka cream, crushed biscuit, chocolate candies",
+
+              product_12_name: "Combination 7",
+              product_12_desc: "Dark chocolate cream, Bueno cream, pistachio cream, hazelnuts",
+
+              product_13_name: "Combination 8",
+              product_13_desc: "Pistachio cream, Bueno cream, ground biscuit",
+
+              product_14_name: "Protein combination 1",
+              product_14_desc: "Protein dark cream, peanut butter",
+
+              product_15_name: "Protein combination 2",
+              product_15_desc: "Protein white cream, peanut butter",
+
+              product_16_name: "Protein combination 3",
+              product_16_desc: "Protein dark cream, protein white cream, hazelnut",
+
+              product_17_name: "Nutella cream",
+              product_17_desc: "Chocolate and hazelnut flavored cream.",
+
+              product_18_name: "White cream",
+              product_18_desc: "Delicate white cream.",
+
+              product_19_name: "Lotus cream",
+              product_19_desc: "Cream with Lotus biscuit flavor.",
+
+              product_20_name: "Dark chocolate cream",
+              product_20_desc: "Rich dark chocolate cream.",
+
+              product_21_name: "Bueno cream",
+              product_21_desc: "Bueno flavored cream.",
+
+              product_22_name: "Nutella cream",
+              product_22_desc: "Classic Nutella cream.",
+
+              product_23_name: "Pistachio cream",
+              product_23_desc: "Pistachio flavored cream.",
+
+              // TEAM
+              teamLabel: "OUR TEAM",
+              teamTitle: "The people behind <span>the taste.</span>",
+              teamText: "Meet the team that prepares your favorite pancakes every day.<br>More than 40 young and motivated people bring the taste and energy of Sakash to life every day.",
+
+              team_0_name: "Aleksandra Nasevska",
+              team_0_role: "Co-owner",
+
+              team_1_name: "Gordan Milenkovski",
+              team_1_role: "Owner",
+
+              team_2_name: "Sara Petkovska",
+              team_2_role: "Employee of the Year",
+
+              // LOCATIONS
+              locationsLabel: "WHERE TO FIND US",
+              locationsTitle: "Visit us at <span>your favorite location.</span>",
+              locationsText: "Choose the location closest to you.",
+              viewLocation: "View location →",
+
+              location_0_name: "Aerodrom",
+              location_0_address: 'Franjo Kluz 16, Skopje 1000',
+              location_0_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Working hours</strong>
+            <br>
+            Monday - Saturday
+            <br>
+            10:00 - 23:00
+        `,
+              location_0_phone: `
+            <span>📞</span>
+            070-399-957
+        `,
+
+              location_1_name: "East Gate",
+              location_1_address: 'Belasitsa 2, Skopje 1000',
+              location_1_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Working hours</strong>
+            <br>
+            Monday - Sunday
+            <br>
+            10:00 - 22:00
+        `,
+              location_1_phone: `
+            <span>📞</span>
+            070-266-125
+        `,
+
+              location_2_name: "Ilinden",
+              location_2_address: 'Bus Stop, Marino',
+              location_2_hours: `
+            <strong style="color: #D5A51E; font-size: larger">Working hours</strong>
+            <br>
+            Tuesday - Sunday
+            <br>
+            10:00 - 23:00
+        `,
+              location_2_phone: `
+            <span>📞</span>
+            078-541-436
+        `,
+
+              // NEWS
+              newsLabel: "NEWS",
+              newsTitle: "What's new at <span>Sakash?</span>",
+              readMore: "Read more →",
+
+              news_0_title: "Chopped pancakes",
+              news_0_date: '01 SEPTEMBER 2026',
+              news_0_text: "Enjoy your favorite pancake wherever you are! Practical to eat and perfect on the go.",
+
+              news_1_title: "Lotuzo Creamcake",
+              news_1_date: '20 APRIL 2026',
+              news_1_text: "Lotus spread, biscuits and lots of love in one pancake.",
+
+              news_2_title: "Sakash Challenge",
+              news_2_date: '30 SEPTEMBER 2025',
+              news_2_text: "You have 30 minutes to eat this huge pancake.<br>If you succeed – you pay nothing.<br>If you don't – you pay for it.",
+
+              // CONTACT
+              contactLabel: "CONTACT",
+              contactTitle: "Let's make it <span>sweet!</span>",
+              contactText: "Have a question or want to place an order? Write to us.",
+
+              namePlaceholder: "Full name",
+              emailPlaceholder: "Email address",
+              subjectPlaceholder: "Subject",
+              messagePlaceholder: "Your message...",
+
+              sendMessage: "Send message →",
+
+              // FOOTER
+              footerLogo: "Sakash <span>?</span>",
+              footerText: "Made with love for pancake lovers.",
+              copyright: "© 2026 Sakash? All rights reserved.",
+
+              // COOKIES
+              cookieTitle: "🍪 Your privacy matters to us",
+              cookieText: "We use cookies to provide a better and more enjoyable experience on our website.",
+
+              acceptAll: "Accept all",
+              necessaryOnly: "Necessary only",
+              customize: "Customize",
+
+              cookieSettingsTitle: "Cookie settings",
+              cookieSettingsText: "Choose which types of cookies you would like to allow.",
+
+              necessaryCookies: "Necessary cookies",
+              functionalCookies: "Functional cookies",
+              analyticsCookies: "Analytics cookies",
+
+              saveSettings: "Save settings"
+          }
+      };
+   /* =====================================================
+      LANGUAGE
+   ===================================================== */
+
+   function changeLanguage(language) {
+
+       document.documentElement.lang = language;
+
+
+       // Ги менува сите текстови
+       document.querySelectorAll("[data-i18n]").forEach(element => {
+
+           const key = element.getAttribute("data-i18n");
+
+           if (
+               translations[language] &&
+               translations[language][key] !== undefined
+           ) {
+
+               element.innerHTML = translations[language][key];
+
+           }
+
+       });
+
+
+       // Ги менува placeholder-ите
+       document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+
+           const key =
+               element.getAttribute("data-i18n-placeholder");
+
+           if (
+               translations[language] &&
+               translations[language][key] !== undefined
+           ) {
+
+               element.placeholder =
+                   translations[language][key];
+
+           }
+
+       });
+
+
+       // Го менува MK / EN во dropdown копчето
+       const languageButton =
+           document.querySelector(".language-dropdown-button");
+
+       if (languageButton) {
+
+           if (language === "mk") {
+
+               languageButton.innerHTML = "🌐 MK ▾";
+
+           } else {
+
+               languageButton.innerHTML = "🌐 EN ▾";
+
+           }
+
+       }
+
+       // const languageButton = document.querySelector(".language-dropdown-button");
+
+       if (languageButton) {
+           languageButton.innerHTML =
+               language === "mk" ? "🌐 MK ▾" : "🌐 EN ▾";
+       }
+
+       // Го памети јазикот
+       localStorage.setItem("language", language);
+
+   }
+
+
+
+   /* =====================================================
+      LANGUAGE DROPDOWN
+   ===================================================== */
+
+   function toggleLanguageMenu() {
+
+       const menu =
+           document.getElementById("language-menu");
+
+       menu.classList.toggle("show");
+
+   }
+
+
+   function closeLanguageMenu() {
+
+       const menu =
+           document.getElementById("language-menu");
+
+       menu.classList.remove("show");
+
+   }
+
+
+   // Затвори го dropdown-от ако кликнеш надвор
+   document.addEventListener("click", function(event) {
+
+       const dropdown =
+           document.querySelector(".language-dropdown");
+
+       if (
+           dropdown &&
+           !dropdown.contains(event.target)
+       ) {
+
+           closeLanguageMenu();
+
+       }
+
+   });
+
+
+
+   /* =====================================================
+      LOAD SAVED LANGUAGE
+   ===================================================== */
+
+   const savedLanguage =
+       localStorage.getItem("language") || "mk";
+
+   changeLanguage(savedLanguage);
+
+
+  </script>
+ </body>
+</html>
+
