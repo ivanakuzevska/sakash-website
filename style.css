@@ -97,7 +97,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 150px;
+        gap: 110px;
     }
 
 
@@ -106,7 +106,7 @@ header {
 .logo {
 
     display: flex;
-    padding-left: 160px;
+    padding-left: 70px;
     align-items: center;
 }
 
@@ -549,9 +549,6 @@ header {
    MENU
 ===================================================== */
 
-    /* =====================================================
-       MENU
-    ===================================================== */
 
     .menu {
         background-color: var(--cream);
@@ -935,28 +932,28 @@ header {
        VERY SMALL MOBILE
     ===================================================== */
 
-    @media (max-width: 450px) {
+    /*@media (max-width: 450px) {*/
 
-        .product-card {
+    /*    .product-card {*/
 
-            flex-direction: column-reverse;
-        }
-
-
-        .product-image {
-
-            width: 100%;
-
-            height: 180px;
-        }
+    /*        flex-direction: column-reverse;*/
+    /*    }*/
 
 
-        .product-info {
+    /*    .product-image {*/
 
-            min-height: 145px;
-        }
+    /*        width: 100%;*/
 
-    }
+    /*        height: 180px;*/
+    /*    }*/
+
+
+    /*    .product-info {*/
+
+    /*        min-height: 145px;*/
+    /*    }*/
+
+    /*}*/
 
 /* =====================================================
    TEAM
@@ -1503,22 +1500,7 @@ footer {
         height: 275px;
     }
 
-    /*.pancake {*/
 
-    /*    !*position: relative;*!*/
-    /*    !*left: -60px;*!*/
-    /*}*/
-
-    /*.pancake img {*/
-    /*    width: 250px;*/
-    /*    height: 250px;*/
-    /*    object-fit: contain;*/
-    /*    display: block;*/
-
-    /*    transform: translateX(-60px);*/
-    /*    margin-top: 80px;*/
-    /*    padding: 0;*/
-    /*}*/
 
     .about {
 
@@ -1560,42 +1542,6 @@ footer {
     }
 
 
-    .team-container {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1.2fr 1fr;
-        gap: 30px;
-        align-items: center;
-    }
-
-    .team-card {
-        background-color: var(--cream);
-        color: var(--dark);
-        padding: 30px;
-        border-radius: 25px;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    /* SREDNIOT KARTON - SOPSTVENIK */
-    .team-card:nth-child(2) {
-        padding: 40px;
-    }
-
-    .team-card:nth-child(2) .team-photo {
-        height: 280px;
-    }
-
-    .team-photo {
-        height: 250px;
-        background-color: var(--light-yellow);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
 
 
     .news-container {
@@ -1741,10 +1687,6 @@ footer {
     }
 
 
-    .team-photo {
-
-        height: 220px;
-    }
 
 }
 
@@ -1987,12 +1929,41 @@ footer {
 
     }
 
+    .cookie-option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 15px 0;
+        color: var(--dark);
+        cursor: pointer;
+    }
+
+    .cookie-option input[type="checkbox"] {
+        appearance: auto !important;
+        -webkit-appearance: checkbox !important;
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px;
+        min-height: 18px;
+        margin: 0;
+        padding: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-block !important;
+        accent-color: var(--green);
+        cursor: pointer;
+    }
+
+    .cookie-option span {
+        color: var(--dark);
+    }
 
     /* LANGUAGE DROPDOWN */
 
     .language-dropdown {
         position: relative;
         list-style: none;
+        padding-left:110px;
     }
 
     .language-dropdown-button {
@@ -2065,4 +2036,691 @@ footer {
             left: 0;
         }
 
+    }
+
+
+    /* =====================================================
+   MOBILE RESPONSIVE - FINAL
+===================================================== */
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+
+    /* ================= TABLET ================= */
+
+    @media (max-width: 900px) {
+
+        /* ---------- NAVBAR ---------- */
+
+        .navbar {
+            height: 70px;
+            padding: 0 25px;
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .logo {
+            padding-left: 0;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 50px;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .mobile-menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 45px;
+            height: 45px;
+
+            background: transparent;
+            border: 2px solid var(--yellow);
+            border-radius: 12px;
+
+            color: white;
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: auto;
+            padding-top: 120px;
+            padding-bottom: 80px;
+
+            flex-direction: column;
+            text-align: center;
+
+            gap: 50px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 60px);
+            line-height: 1;
+        }
+
+        .hero-text {
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+
+        /* ---------- HERO IMAGE ---------- */
+
+        .pancake-circle {
+            width: 330px;
+            height: 330px;
+        }
+
+        .pancake-circle::before {
+            width: 275px;
+            height: 275px;
+        }
+
+        .pancake {
+            transform: rotate(5deg);
+            margin: 0;
+        }
+
+        .pancake img {
+            width: 230px;
+            height: 230px;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            flex-direction: column;
+            gap: 45px;
+        }
+
+        .about-image {
+            width: 100%;
+            min-height: 450px;
+
+            margin-left: 0;
+            transform: none;
+        }
+
+        .about-content {
+            transform: none;
+            text-align: center;
+        }
+
+        .about-content > p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+        }
+
+        .about-features {
+            justify-content: center;
+        }
+
+
+        /* ---------- MENU ---------- */
+
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        /* ---------- TEAM ---------- */
+
+        .team-container {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            gap: 25px;
+        }
+
+        .team-card:nth-child(2) {
+            transform: none;
+            padding: 30px;
+        }
+
+        .team-card:nth-child(2) .team-photo {
+            height: 250px;
+        }
+
+
+        /* ---------- LOCATIONS ---------- */
+
+        .locations-container {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+        }
+
+
+        /* ---------- NEWS ---------- */
+
+        .news-container {
+            grid-template-columns: 1fr;
+            max-width: 600px;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .contact-form {
+            padding-top: 0;
+        }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+        section {
+            padding: 65px 20px;
+        }
+
+
+        /* ---------- NAVBAR ---------- */
+
+        .navbar {
+            height: 65px;
+            padding: 0 18px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 48px;
+        }
+
+        .mobile-menu-button {
+            width: 42px;
+            height: 42px;
+            font-size: 23px;
+        }
+
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            padding-top: 105px;
+            padding-bottom: 65px;
+            gap: 40px;
+        }
+
+        .small-title {
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            line-height: 1;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            font-size: 0.72em;
+            margin-top: 8px;
+        }
+
+        .hero-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+
+        /* ---------- HERO BUTTONS ---------- */
+
+        .hero-buttons {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            width: 100%;
+            padding: 14px 20px;
+        }
+
+
+        /* ---------- HERO CIRCLE ---------- */
+
+        .pancake-circle {
+            width: 280px;
+            height: 280px;
+        }
+
+        .pancake-circle::before {
+            width: 230px;
+            height: 230px;
+        }
+
+        .pancake {
+            transform: rotate(5deg);
+            margin: 0;
+        }
+
+        .pancake img {
+            width: 205px;
+            height: 205px;
+            margin: 0;
+        }
+
+
+        /* ---------- SECTION HEADINGS ---------- */
+
+        .section-heading {
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2,
+        .about-content h2,
+        .contact h2 {
+            font-size: 36px;
+            line-height: 1.1;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            gap: 35px;
+        }
+
+        .about-image {
+            min-height: 380px;
+            border-radius: 22px;
+            padding: 20px;
+        }
+
+        .about-content > p {
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .about-features {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .about-features strong {
+            font-size: 25px;
+        }
+
+        .about-features span {
+            font-size: 12px;
+        }
+
+
+        /* ---------- MENU ---------- */
+
+        .menu {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .menu-section {
+            margin-bottom: 60px;
+        }
+
+        .menu-title {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+        }
+
+        .menu-title h3 {
+            font-size: 27px;
+        }
+
+        .products-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .product-card {
+            min-height: 150px;
+        }
+
+        .product-card {
+            flex-direction: column-reverse;
+            min-height: auto;
+        }
+
+        .product-image {
+            width: 100%;
+            min-width: 0;
+            height: 190px;
+        }
+
+        .product-info {
+            min-height: 145px;
+            padding: 18px;
+        }
+
+        .product-info {
+            padding: 16px;
+        }
+
+        .product-info h4 {
+            font-size: 16px;
+        }
+
+        .product-info p {
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .product-info strong {
+            font-size: 15px;
+        }
+
+
+
+        /* ---------- LOCATIONS ---------- */
+
+        .locations-container {
+            width: 100%;
+        }
+
+        .location-card {
+            padding: 30px 20px;
+            border-radius: 22px;
+        }
+
+        .location-card h3 {
+            font-size: 23px;
+        }
+
+        .location-card p {
+            font-size: 15px;
+        }
+
+
+        /* ---------- NEWS ---------- */
+
+        .news-container {
+            width: 100%;
+            margin-top: 35px;
+        }
+
+        .news-card {
+            border-radius: 20px;
+        }
+
+        .news-image {
+            height: 210px;
+        }
+
+        .news-content {
+            padding: 22px;
+        }
+
+        .news-content h3 {
+            font-size: 21px;
+        }
+
+        .news-content p:not(.date) {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            gap: 30px;
+        }
+
+        .contact-info img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            font-size: 15px;
+        }
+
+
+        /* ---------- COOKIES ---------- */
+
+        .cookie-banner {
+            width: calc(100% - 20px);
+            bottom: 10px;
+
+            padding: 18px;
+            border-radius: 18px;
+
+            flex-direction: column;
+            align-items: stretch;
+            gap: 15px;
+        }
+
+        .cookie-text h3 {
+            font-size: 18px;
+        }
+
+        .cookie-text p {
+            font-size: 13px;
+        }
+
+        .cookie-buttons {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .cookie-buttons button {
+            width: 100%;
+        }
+
+        .cookie-settings-box {
+            width: calc(100% - 30px);
+            padding: 25px 20px;
+            border-radius: 20px;
+        }
+
+    }
+
+
+    /* =====================================================
+       VERY SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 400px) {
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero-text {
+            font-size: 15px;
+        }
+
+        .pancake-circle {
+            width: 250px;
+            height: 250px;
+        }
+
+        .pancake-circle::before {
+            width: 205px;
+            height: 205px;
+        }
+
+        .pancake img {
+            width: 185px;
+            height: 185px;
+        }
+
+        .section-heading h2,
+        .about-content h2,
+        .contact h2 {
+            font-size: 32px;
+        }
+
+        .product-image {
+            width: 115px;
+            min-width: 115px;
+        }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+        .nav-links.mobile-open {
+            display: flex;
+            position: absolute;
+
+            top: 70px;
+            left: 15px;
+            right: 15px;
+
+            flex-direction: column;
+            align-items: stretch;
+
+            gap: 0;
+
+            background-color: var(--green);
+
+            padding: 10px;
+
+            border-radius: 0 0 18px 18px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+
+            z-index: 999;
+        }
+
+        .nav-links.mobile-open li {
+            width: 100%;
+        }
+
+        .nav-links.mobile-open a {
+            display: block;
+            width: 100%;
+
+            padding: 13px 15px;
+
+            font-size: 16px;
+            text-align: center;
+
+            border-radius: 10px;
+        }
+
+        .nav-links.mobile-open a:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-links.mobile-open .language-dropdown {
+            text-align: center;
+            padding: 8px;
+        }
+
+    }
+
+
+    /* =====================================================
+   TEAM - MOBILE IMAGE FIX
+===================================================== */
+
+    @media (max-width: 600px) {
+
+        .team-container {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .team-card {
+            padding: 20px;
+            border-radius: 22px;
+        }
+
+        .team-card:nth-child(2) {
+            padding: 20px;
+            transform: none;
+        }
+
+        .team-photo,
+        .team-card:nth-child(2) .team-photo {
+            width: 100%;
+            height: 330px;
+
+            background-color: var(--light-yellow);
+            border-radius: 18px;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        .team-photo img {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+
+            object-fit: contain;
+            object-position: center bottom;
+
+            display: block;
+        }
+
+        .team-card h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            font-size: 16px;
+        }
     }

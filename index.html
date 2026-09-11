@@ -57,6 +57,10 @@
                   </div>
               </li>
           </ul>
+
+          <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+              ☰
+          </button>
       </nav>
   </header>
   <!-- ================= HERO ================= -->
@@ -957,18 +961,26 @@
     <p data-i18n="cookieSettingsText">
      &Icy;&zcy;&bcy;&iecy;&rcy;&iecy;&tcy;&iecy; &kcy;&ocy;&icy; &tcy;&icy;&pcy;&ocy;&vcy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy; &scy;&acy;&kcy;&acy;&tcy;&iecy; &dcy;&acy; &gcy;&icy; &dcy;&ocy;&zcy;&vcy;&ocy;&lcy;&icy;&tcy;&iecy;.
     </p>
-    <label data-i18n="necessaryCookies">
-     <input checked="" disabled="" type="checkbox"/>
-     &Ncy;&iecy;&ocy;&pcy;&khcy;&ocy;&dcy;&ncy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
-    </label>
-    <label data-i18n="functionalCookies">
-     <input id="functional-cookies" type="checkbox"/>
-     &Fcy;&ucy;&ncy;&kcy;&tscy;&icy;&ocy;&ncy;&acy;&lcy;&ncy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
-    </label>
-    <label data-i18n="analyticsCookies">
-     <input id="analytics-cookies" type="checkbox"/>
-     &Acy;&ncy;&acy;&lcy;&icy;&tcy;&icy;&chcy;&kcy;&icy; &kcy;&ocy;&lcy;&acy;&chcy;&icy;&njcy;&acy;
-    </label>
+       <label class="cookie-option">
+           <input checked disabled type="checkbox"/>
+           <span data-i18n="necessaryCookies">
+        Неопходни колачиња
+    </span>
+       </label>
+
+       <label class="cookie-option">
+           <input id="functional-cookies" type="checkbox"/>
+           <span data-i18n="functionalCookies">
+        Функционални колачиња
+    </span>
+       </label>
+
+       <label class="cookie-option">
+           <input id="analytics-cookies" type="checkbox"/>
+           <span data-i18n="analyticsCookies">
+        Аналитички колачиња
+    </span>
+       </label>
     <button class="cookie-accept" data-i18n="saveSettings" id="save-cookies">
      &Zcy;&acy;&chcy;&ucy;&vcy;&acy;&jsercy; &pcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
     </button>
@@ -1620,6 +1632,15 @@
 
    changeLanguage(savedLanguage);
 
+      function toggleMobileMenu() {
+          const navLinks = document.querySelector(".nav-links");
+
+          if (navLinks.classList.contains("mobile-open")) {
+              navLinks.classList.remove("mobile-open");
+          } else {
+              navLinks.classList.add("mobile-open");
+          }
+      }
 
   </script>
  </body>
