@@ -58,6 +58,24 @@
               </li>
           </ul>
 
+          <button
+                  type="button"
+                  class="mobile-language-button"
+                  onclick="toggleMobileLanguageMenu()"
+          >
+              🌐 MK ▾
+          </button>
+
+          <div class="mobile-language-menu" id="mobile-language-menu">
+              <button type="button" onclick="changeLanguage('mk'); closeMobileLanguageMenu();">
+                  🇲🇰 Македонски
+              </button>
+
+              <button type="button" onclick="changeLanguage('en'); closeMobileLanguageMenu();">
+                  🇬🇧 English
+              </button>
+          </div>
+
           <button class="mobile-menu-button" onclick="toggleMobileMenu()">
               ☰
           </button>
@@ -1640,6 +1658,18 @@
           } else {
               navLinks.classList.add("mobile-open");
           }
+      }
+
+      function toggleMobileLanguageMenu() {
+          const menu = document.getElementById("mobile-language-menu");
+
+          menu.classList.toggle("show");
+      }
+
+      function closeMobileLanguageMenu() {
+          const menu = document.getElementById("mobile-language-menu");
+
+          menu.classList.remove("show");
       }
 
       const navLinks = document.querySelector(".nav-links");
